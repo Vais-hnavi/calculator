@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset{
+            border: 2px solid;
+            height: 300px;
+            width: 300px;
+            background-color:azure;
+        }
+        form{
+            
+            color: brown;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Hello {{name}}</h1>
+    <fieldset><legend><h2>calc</h2></legend>
+    <form action="add/" method="POST">
+        {% csrf_token %}
+        <label for="num1">number1 :</label>
+        <input type="number" id="num1" name="num1"><br><br>
+        <label for="num2">number2 :</label>
+        <input type="number" id="num2" name="num2"><br><br>
+        <label for="op">operator :</label>
+        <input type="text" id="op" name="op"><br><br> 
+        <input type="submit" value="calculate">
+    </form>
+    
+    </fieldset></center>
+</body>
+</html>
